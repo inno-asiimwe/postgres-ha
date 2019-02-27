@@ -1,0 +1,8 @@
+- name: install postgresql
+  apt:
+    name: postgresql
+    state: present
+- name: stop postgresql service
+  command: service postgresql stop
+- name: create symbolic links in system path
+  command: ln -s /usr/lib/postgresql/9.6/bin/* /usr/sbin/

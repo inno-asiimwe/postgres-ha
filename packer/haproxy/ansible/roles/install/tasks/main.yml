@@ -1,0 +1,7 @@
+- name: update repositories
+  command: apt-get update
+
+- name: Install haproxy
+  apt:
+    name: haproxy
+    state: present

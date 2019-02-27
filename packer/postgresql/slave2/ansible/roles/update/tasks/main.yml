@@ -1,0 +1,2 @@
+- name: update repositories
+  command: apt-get update

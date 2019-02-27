@@ -1,0 +1,5 @@
+---
+ansible_python_interpreter: "/usr/bin/python3"
+ETCD_VER: "v3.3.12"
+DOWNLOAD_URL: "https://github.com/etcd-io/etcd/releases/download"
+etcd_ip: "{{ etcd_ip }}"
