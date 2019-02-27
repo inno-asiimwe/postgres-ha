@@ -1,0 +1,20 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "account_file": "../../account.json",
+            "project_id": "mentorship-1",
+            "source_image": "debian-9-stretch-v20190213",
+            "ssh_username": "postgres-ha",
+            "zone": "us-east1-b",
+            "image_name": "postgres-slave-1"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "./ansible/provisioner.yml",
+            "ansible_env_vars": ["ANSIBLE_HOST_KEY_CHECKING=False"]
+        }
+    ]
+}

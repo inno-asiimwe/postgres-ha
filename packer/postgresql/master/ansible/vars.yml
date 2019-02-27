@@ -1,0 +1,8 @@
+---
+ansible_python_interpreter: "/usr/bin/python3"
+master_ip: "{{ master_ip }}"
+etcd_ip: "{{ etcd_ip }}"
+slave_1_ip: "{{ slave_1_ip }}"
+slave_2_ip: "{{ slave_2_ip }}"
+rep_pass: "{{ rep_pass }}"
+postgres_password: "{{ postgress_password }}"

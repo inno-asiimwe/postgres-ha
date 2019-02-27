@@ -1,0 +1,7 @@
+- name: add configuration settings
+  template:
+    src: files/haproxy.j2
+    dest: /etc/haproxy/haproxy.cfg
+
+- name: restart haproxy
+  command: service haproxy restart

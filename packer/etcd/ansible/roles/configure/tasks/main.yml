@@ -1,0 +1,6 @@
+- name: copy etcd config to the working directory
+  template:
+    src: files/etcd.j2
+    dest: etcd.yml
+- name: run etcd server
+  command: etcd --config-file etcd.yml

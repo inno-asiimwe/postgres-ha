@@ -1,0 +1,10 @@
+- name: Download etcd binaries
+  command: curl -L {DOWNLOAD_URL}/{ETCD_VER}-linux-amd64.tar.gz
+- name: Extract binaries
+  command: tar xzvf /tmp/etcd-{ETCD_VER}-linux-amd64.tar.gz -C /tmp/etcd-download-test  --strip-components=1
+- name: remove compressed file
+  command: rm -f /tmp/etcd-{ETCD_VER}-linux-amd64.tar.gz
+- name: move etcd to the system path
+  command: mv /tmp/etcd-download-test/etcd /usr/local/bin/
+
+  

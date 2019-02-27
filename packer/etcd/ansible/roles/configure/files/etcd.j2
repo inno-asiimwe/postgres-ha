@@ -1,0 +1,7 @@
+listen-peer-urls: "http://{{ etcd_ip }}:2380"
+listen-client-urls: "http://localhost:2379, http://{{ etcd_ip }}:2379"
+initial-advertise-peer-urls: "http://{{ etcd_ip }}:2380"
+initial-cluster: "etcd0=http://{{ etcd_ip }}:2380,"
+advertise-client-urls: "http://{{ etcd_ip }}:2379"
+initial-cluster-token: "cluster1"
+initial-cluster-state: "new"
